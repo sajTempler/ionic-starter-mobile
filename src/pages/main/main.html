@@ -7,12 +7,10 @@
     <ion-title>主页</ion-title>
   </ion-navbar>
 
-  <ion-toolbar>
-    <ion-segment [ngModel]="tab" (ngModelChange)="setTab($event)">
-      <ion-segment-button value="primary">主标签</ion-segment-button>
-      <ion-segment-button value="secondary">次标签</ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+  <ion-segment [ngModel]="tab" (ngModelChange)="setTab($event)">
+    <ion-segment-button value="primary">主标签</ion-segment-button>
+    <ion-segment-button value="secondary">次标签</ion-segment-button>
+  </ion-segment>
 
 </ion-header>
 

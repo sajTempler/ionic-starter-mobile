@@ -31,6 +31,9 @@
 .scroll-content {
   background: #fff;
   overflow-y: auto;
+  .has-refresher > & {
+    border-top: 0;
+  }
 }
 .title {
   bottom: 0;
