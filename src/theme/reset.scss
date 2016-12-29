@@ -1,0 +1,25 @@
+.disable-scroll .ion-page {
+  pointer-events: auto;
+}
+.header:after {
+  content: none;
+}
+.scroll-content {
+  background: #fff;
+  overflow-y: auto;
+  .has-refresher > & {
+    border-top: 0;
+  }
+}
+.title {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: -1;
+}
+.toolbar-background {
+  background: #eee;
+}
