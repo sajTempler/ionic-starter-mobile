@@ -7,6 +7,23 @@
 .header:after {
   content: none;
 }
+.refresher-pulling-icon .icon {
+  color: #fff;
+  position: relative;
+  top: 1px;
+  &:after {
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
+    content: '';
+    height: 28px;
+    left: 1px;
+    position: absolute;
+    top: 6px;
+    width: 28px;
+    z-index: -1;
+  }
+}
 .scroll-content {
   background: #fff;
   overflow-y: auto;
