@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.fundo90.ionic2mobile" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>ionic2mobile</name>
+  <description>ionic2-starter-mobile</description>
+  <author href="http://github.com/fundo90/ionic2-starter-mobile">fundo90</author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <platform name="android">
+    <allow-intent href="market:*"/>
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
+  </platform>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="111111"/>
+  <preference name="SplashShowOnlyFirstTime" value="false"/>
+  <preference name="StatusBarBackgroundColor" value="#fff"/>
+  <preference name="StatusBarOverlaysWebView" value="false"/>
+  <preference name="StatusBarStyle" value="default"/>
+</widget>

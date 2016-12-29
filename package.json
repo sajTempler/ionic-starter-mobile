@@ -1,0 +1,58 @@
+{
+  "name": "ionic2mobile",
+  "private": true,
+  "scripts": {
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "latest",
+    "@angular/compiler": "latest",
+    "@angular/compiler-cli": "latest",
+    "@angular/core": "latest",
+    "@angular/forms": "latest",
+    "@angular/http": "latest",
+    "@angular/platform-browser": "latest",
+    "@angular/platform-browser-dynamic": "latest",
+    "@angular/platform-server": "latest",
+    "@ionic/storage": "latest",
+    "ionic-angular": "2.0.0-rc.3",
+    "ionic-native": "latest",
+    "ionicons": "latest",
+    "rxjs": "latest",
+    "zone.js": "latest"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "latest",
+    "typescript": "latest"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-compat",
+    "cordova-plugin-console",
+    "cordova-plugin-crosswalk-webview",
+    "cordova-plugin-device",
+    "cordova-plugin-file",
+    "cordova-plugin-http",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-whitelist",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "browser",
+      "version": "",
+      "locator": "browser"
+    },
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
+  ]
+}

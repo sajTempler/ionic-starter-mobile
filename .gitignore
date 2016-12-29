@@ -1,0 +1,16 @@
+.idea/
+.sass-cache/
+.tmp/
+.vscode/
+node_modules/
+hooks/
+platforms/
+plugins/
+res/
+resources/android/
+resources/ios/
+www/
+
+.DS_Store
+npm-debug.log
+Thumbs.db

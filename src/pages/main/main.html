@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>主页</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment [ngModel]="tab" (ngModelChange)="setTab($event)">
+      <ion-segment-button value="primary">主标签</ion-segment-button>
+      <ion-segment-button value="secondary">次标签</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="setList($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div [ngSwitch]="tab">
+    <main-tab-primary *ngSwitchCase="'primary'"></main-tab-primary>
+    <main-tab-secondary *ngSwitchCase="'secondary'"></main-tab-secondary>
+  </div>
+
+</ion-content>

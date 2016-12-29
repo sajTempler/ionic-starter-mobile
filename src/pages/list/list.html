@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>列表页</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-refresher (ionRefresh)="setList($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-list>
+      <ion-item *ngFor="let notice of list" (click)="setSelected(notice)">{{ notice.title }}</ion-item>
+    </ion-list>
+
+</ion-content>
