@@ -1,7 +1,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item menuClose *ngFor="let page of menu" (click)="setPage(page)">{{ page.name }}</ion-item>
+    <ion-item menuClose *ngFor="let page of menu" (tap)="setPage(page)">{{ page.name }}</ion-item>
     <ion-item menuClose (click)="setLogout()">退出登录</ion-item>
   </ion-list>
 

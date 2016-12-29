@@ -13,7 +13,7 @@ import { User } from '../providers/user'
   imports: [
     IonicModule.forRoot(
       App.component,
-      { mode: 'md', pageTransition: 'ios', swipeBackEnabled: false },
+      { menuType: 'push', mode: 'md', pageTransition: 'ios', swipeBackEnabled: false },
       { links: App.routes }
     )
   ],

@@ -14,7 +14,7 @@
     </ion-refresher>
 
     <ion-list>
-      <ion-item *ngFor="let notice of list" (click)="setSelected(notice)">{{ notice.title }}</ion-item>
+      <ion-item *ngFor="let notice of list" (tap)="setSelected(notice)">{{ notice.title }}</ion-item>
     </ion-list>
 
 </ion-content>

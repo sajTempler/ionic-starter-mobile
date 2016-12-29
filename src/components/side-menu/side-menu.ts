@@ -31,10 +31,10 @@ export class SideMenuComponent {
 
   setLogout () {
     this.alert.create({
-      message: '确定退出？',
+      message: '登出账号？',
       buttons: [
-        { text: '否', role: 'cancel' },
-        { text: '是', handler: this.setUser.bind(this) }
+        { text: '取消', role: 'cancel' },
+        { text: '确认', handler: this.setUser.bind(this) }
       ]
     }).present()
   }
