@@ -11,6 +11,14 @@ import { Timestamp } from '../pipes/timestamp'
 
 export const App = {
   component: AppComponent,
+  config: {
+    backButtonIcon: 'ios-arrow-back',
+    ionPullIcon: 'refresh-circle',
+    menuType: 'push',
+    mode: 'md',
+    pageTransition: 'ios',
+    swipeBackEnabled: false
+  },
   debug: true,
   declare: [
     // 页面

@@ -13,7 +13,7 @@ import { User } from '../providers/user'
   imports: [
     IonicModule.forRoot(
       App.component,
-      { backButtonIcon: 'ios-arrow-back', ionPullIcon: 'refresh-circle', menuType: 'push', mode: 'md', pageTransition: 'ios', swipeBackEnabled: false },
+      App.config,
       { links: App.routes }
     )
   ],
