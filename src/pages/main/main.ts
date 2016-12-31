@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { LoadingController } from 'ionic-angular'
-import { Main } from '../../providers/main'
+import { Common } from '../../providers/common'
 import { refreshing } from '../../app/app'
 
 @Component({
@@ -10,20 +10,20 @@ import { refreshing } from '../../app/app'
 export class MainPage {
 
   constructor (
-    public loading: LoadingController,
-    public main: Main
+    public common: Common,
+    public loading: LoadingController
   ) { }
 
   ionViewDidEnter() {
-    this.main.activeMenu = true
+    this.common.activeMenu = true
   }
 
   ionViewWillLeave () {
-    this.main.activeMenu = false
+    this.common.activeMenu = false
   }
 
   get tab () {
-    return this.main.mainTab
+    return this.common.mainTab
   }
 
   setList (refresher) {
@@ -35,7 +35,7 @@ export class MainPage {
   }
 
   setTab (tab) {
-    this.main.mainTab = tab
+    this.common.mainTab = tab
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { AlertController, ModalController } from 'ionic-angular'
 import { UserLoginPage } from '../../pages/user-login/user-login'
-import { Main } from '../../providers/main'
+import { Common } from '../../providers/common'
 import { User } from '../../providers/user'
 
 @Component({
@@ -12,13 +12,13 @@ export class SideMenuComponent {
 
   constructor (
     public alert: AlertController,
-    public main: Main,
+    public common: Common,
     public modal: ModalController,
     public user: User
   ) { }
 
   get menu () {
-    return this.main.menu
+    return this.common.menu
   }
 
   get username () {

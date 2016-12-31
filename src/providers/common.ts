@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular'
 import { Api } from './api'
 
 @Injectable()
-export class Main {
+export class Common {
 
   activeMenu: boolean                 // 开启侧栏
   mainTab: string                     // 首页标签

@@ -7,6 +7,10 @@
 .header:after {
   content: none;
 }
+.menu-content-push {
+  transform-origin: 0 50%;
+  will-change: transform;
+}
 .refresher-pulling-icon .icon {
   color: #fff;
   position: relative;

@@ -2,8 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core'
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular'
 import { App } from './app'
 import { Api } from '../providers/api'
+import { Common } from '../providers/common'
 import { Notice } from '../providers/notice'
-import { Main } from '../providers/main'
 import { User } from '../providers/user'
 
 @NgModule({
@@ -19,7 +19,7 @@ import { User } from '../providers/user'
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    Api, Notice, Main, User
+    Api, Common, Notice, User
   ]
 })
 export class AppModule { }

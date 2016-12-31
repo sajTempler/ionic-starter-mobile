@@ -2,7 +2,7 @@ import { Component, HostListener, NgZone } from '@angular/core'
 import { AlertController, ModalController, Platform } from 'ionic-angular'
 import { Splashscreen } from 'ionic-native'
 import { UserLoginPage } from '../pages/user-login/user-login'
-import { Main } from '../providers/main'
+import { Common } from '../providers/common'
 import { User } from '../providers/user'
 
 @Component({
@@ -17,7 +17,7 @@ export class AppComponent {
 
   constructor (
     public alert: AlertController,
-    public main: Main,
+    public common: Common,
     public modal: ModalController,
     public platform: Platform,
     public user: User,
@@ -36,11 +36,11 @@ export class AppComponent {
   }
 
   get swipeEnabled () {
-    return this.main.activeMenu
+    return this.common.activeMenu
   }
 
   setApp () {
-    return this.main.doAppInit()
+    return this.common.doAppInit()
   }
 
   setEvent () {
