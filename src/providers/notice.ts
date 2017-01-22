@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core'
-import { Platform } from 'ionic-angular'
 import { Api } from './api'
 
 @Injectable()
@@ -17,8 +16,7 @@ export class Notice {
   }
 
   constructor (
-    public api: Api,
-    public platform: Platform
+    public api: Api
   ) {
     this.list = []
     this.selected = {
@@ -26,7 +24,7 @@ export class Notice {
       title: '',
       content: ''
     }
-    this.platform.is('cordova') || this.ngOnInit()
+    window['cordova'] || this.ngOnInit()
   }
 
   // 测试数据

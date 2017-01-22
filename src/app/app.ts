@@ -16,8 +16,7 @@ export const App = {
     ionPullIcon: 'refresh-circle',
     menuType: 'push',
     mode: 'md',
-    pageTransition: 'ios',
-    swipeBackEnabled: false
+    pageTransition: 'ios'
   },
   debug: true,
   declare: [
