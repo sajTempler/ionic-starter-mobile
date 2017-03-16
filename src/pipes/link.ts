@@ -7,7 +7,7 @@ import { Injectable, Pipe } from '@angular/core'
 export class Link {
 
   transform (value) {
-    return '#' + value
+    return '#/' + value
   }
 
 }
