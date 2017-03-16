@@ -23,7 +23,7 @@ export class AppComponent {
   ngOnInit () {
     Promise.all([
       this.setApp(),
-      this.setPlugin(),
+      this.setNative(),
       this.setUser()
     ])
     .then(() => Splashscreen.hide())
@@ -37,7 +37,7 @@ export class AppComponent {
     return this.setting.doInitApp()
   }
 
-  setPlugin () {
+  setNative () {
     return this.platform.ready()
   }
 
