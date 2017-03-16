@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Platform } from 'ionic-angular'
 import { Splashscreen } from 'ionic-native'
+import { LoginPage, MainPage } from '../imports/page'
 import { Setting, User } from '../imports/provider'
 
 @Component({
@@ -8,7 +9,7 @@ import { Setting, User } from '../imports/provider'
     <ion-menu [content]="content" swipeEnabled="false">
       <app-nav></app-nav>
     </ion-menu>
-    <ion-nav #content></ion-nav>
+    <ion-nav #content [root]="root"></ion-nav>
   `
 })
 export class AppComponent {
@@ -20,23 +21,28 @@ export class AppComponent {
   ) {}
 
   ngOnInit () {
-    this.setApp()
-    this.setPlugin()
-    this.setUser()
+    Promise.all([
+      this.setApp(),
+      this.setPlugin(),
+      this.setUser()
+    ])
+    .then(() => Splashscreen.hide())
+  }
+
+  get root () {
+    return this.user.onAir ? MainPage : LoginPage
   }
 
   setApp () {
-    this.setting.doInitApp()
+    return this.setting.doInitApp()
   }
 
   setPlugin () {
-    this.platform.ready().then(() => {
-      Splashscreen.hide()
-    })
+    return this.platform.ready()
   }
 
   setUser () {
-    this.user.doSyncCurrent()
+    return this.user.doSyncCurrent()
   }
 
 }

@@ -4,6 +4,8 @@ import { Api } from '../imports/provider'
 @Injectable()
 export class User {
 
+  onAir: boolean
+
   constructor (
     public api: Api
   ) {
