@@ -5,7 +5,7 @@ import { Splashscreen } from 'ionic-native'
 @Component({
   template: `
     <ion-menu [content]="content" swipeEnabled="false">
-      <page-menu></page-menu>
+      <app-nav></app-nav>
     </ion-menu>
     <ion-nav #content></ion-nav>
   `

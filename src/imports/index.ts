@@ -1,6 +1,6 @@
 import { AppComponent } from '../app/app.component'
-// import { LayoutComponent, NavContentComponent, NavHeaderComponent } from './component'
-import { MainPage, MenuPage, SubPage } from './page'
+import { AppNavComponent } from './component'
+import { MainPage, SubPage } from './page'
 import { Link, Timestamp } from './pipe'
 import { Api, User } from './provider'
 
@@ -8,22 +8,23 @@ export const App = {
   component: AppComponent,
   config: {
     backButtonIcon: 'ios-arrow-back',
+    hoverCSS: false,
     iconMode: 'ios',
     // locationStrategy: 'path',
-    menuType: 'push',
+    menuType: 'menu',
     // mode: 'fd',
     pageTransition: 'ios',
     swipeBackEnabled: false
   },
   entry: [
     // 页面
-    MainPage, MenuPage, SubPage,
+    MainPage, SubPage,
     // 应用
     AppComponent
   ],
   extra: [
     // 组件
-    // LayoutComponent, NavContentComponent, NavHeaderComponent,
+    AppNavComponent,
     // 管道
     Link, Timestamp
   ],

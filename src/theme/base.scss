@@ -12,7 +12,6 @@ a {
 }
 
 body {
-  color: #444;
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
   line-height: 1;
 }
@@ -21,18 +20,10 @@ li {
   list-style: none;
 }
 
-// .disable-scroll .ion-page {
-//   pointer-events: auto;
-// }
-//
-// .enable-hover a:hover {
-//   opacity: 1;
-// }
-//
-// .scroll-content {
-//   overflow-y: auto;
-//
-//   .has-refresher > & {
-//     border-top: 0;
-//   }
-// }
+.menu-content {
+  transform-origin: 0 50%;
+}
+
+.scroll-content {
+  overflow-y: auto;
+}

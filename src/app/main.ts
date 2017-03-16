@@ -2,7 +2,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { Animation, Menu, MenuController, MenuType, Platform } from 'ionic-angular'
 import { AppModule } from './app.module'
 
-class MenuPushType extends MenuType {
+class AppMenu extends MenuType {
 
   constructor (
     menu: Menu,
@@ -11,19 +11,17 @@ class MenuPushType extends MenuType {
     super(plt)
 
     const menuWidth = menu.width()
-    const transition = [
-      { name: 'Menu', from: -menuWidth / 4 + 'px', to: '0px' },
-      { name: 'Content', from: '0px', to: menuWidth + 'px' }
-    ]
 
-    transition.forEach((ele) => {
-      const animation = new Animation(plt, menu[`get${ele.name}Element`]())
-      animation.fromTo('translateX', ele.from, ele.to)
-      this.ani.add(animation)
-    })
+    const appMenu = new Animation(plt, menu.getMenuElement())
+    appMenu.fromTo('translateX', -menuWidth / 4 + 'px', '0px')
+    this.ani.add(appMenu)
+
+    const appContent = new Animation(plt, menu.getContentElement())
+    appContent.fromTo('translateX', '0px', menuWidth + 'px').fromTo('scale', '1', '.8');
+    this.ani.add(appContent)
   }
 
 }
 
-MenuController.registerType('push', MenuPushType)
+MenuController.registerType('menu', AppMenu)
 platformBrowserDynamic().bootstrapModule(AppModule)
