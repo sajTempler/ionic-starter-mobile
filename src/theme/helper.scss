@@ -1,0 +1,30 @@
+.x {
+  float: left;
+  line-height: inherit;
+}
+
+.y:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.z {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.l {
+  margin: 0 auto;
+}
+
+.r {
+  float: right;
+}
+
+.w {
+  height: 100%;
+  overflow-y: auto;
+}

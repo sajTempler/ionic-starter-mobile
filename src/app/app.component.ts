@@ -1,14 +1,11 @@
-import { Component, HostListener, NgZone } from '@angular/core'
-import { AlertController, ModalController, Platform } from 'ionic-angular'
+import { Component } from '@angular/core'
+import { Platform } from 'ionic-angular'
 import { Splashscreen } from 'ionic-native'
-import { UserLoginPage } from '../pages/user-login/user-login'
-import { Common } from '../providers/common'
-import { User } from '../providers/user'
 
 @Component({
   template: `
-    <ion-menu [content]="content" [swipeEnabled]="swipeEnabled">
-      <side-menu></side-menu>
+    <ion-menu [content]="content" swipeEnabled="false">
+      <page-menu></page-menu>
     </ion-menu>
     <ion-nav #content></ion-nav>
   `
@@ -16,58 +13,25 @@ import { User } from '../providers/user'
 export class AppComponent {
 
   constructor (
-    public alert: AlertController,
-    public common: Common,
-    public modal: ModalController,
-    public platform: Platform,
-    public user: User,
-    public zone: NgZone
+    public platform: Platform
   ) {}
 
   ngOnInit () {
-    this.platform.ready()
-      .then(() => Promise.all([
-        this.setApp(),
-        this.setEvent(),
-        this.setUser()
-      ]))
-      .then(() => location.hash = '/main')
-      .then(() => setTimeout(() => Splashscreen.hide(), 666))
-  }
-
-  get swipeEnabled () {
-    return this.common.activeMenu
+    this.setApp()
+    this.setPlugin()
+    this.setUser()
   }
 
   setApp () {
-    return this.common.doAppInit()
   }
 
-  setEvent () {
-    return Promise.resolve(
-      // 应用激活事件
-      this.platform.resume.subscribe(() => {
-        this.alert.create({
-          message: '欢迎回来'
-        }).present()
-      })
-    )
+  setPlugin () {
+    this.platform.ready().then(() => {
+      Splashscreen.hide()
+    })
   }
 
   setUser () {
-    return this.user
-      .doSyncCurrent()
-      .catch(() => {
-        this.modal.create(UserLoginPage).present()
-      })
-  }
-
-  @HostListener('window:resize')
-  onResize () {
-    // 强制更新页面状态
-    this.zone.run(() => {
-      console.log('窗口大小变了')
-    })
   }
 
 }

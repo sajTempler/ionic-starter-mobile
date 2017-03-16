@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core'
 import { Api } from '../imports/provider'
 
 @Injectable()
-export class User {
+export class Setting {
 
   constructor (
     public api: Api
