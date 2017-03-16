@@ -1,8 +1,8 @@
 import { AppComponent } from '../app/app.component'
 import { AppNavComponent } from './component'
-import { MainPage, SubPage } from './page'
+import { LoginPage, MainPage, SubPage } from './page'
 import { Link, Timestamp } from './pipe'
-import { Api, User } from './provider'
+import { Api, Setting, User } from './provider'
 
 export const App = {
   component: AppComponent,
@@ -18,7 +18,7 @@ export const App = {
   },
   entry: [
     // 页面
-    MainPage, SubPage,
+    LoginPage, MainPage, SubPage,
     // 应用
     AppComponent
   ],
@@ -29,12 +29,13 @@ export const App = {
     Link, Timestamp
   ],
   routes: [
+    { segment: 'login', component: LoginPage },
     { segment: 'main', component: MainPage },
     { segment: 'sub', component: SubPage }
   ],
   store: [
     // 服务
-    Api, User
+    Api, Setting, User
   ]
 }
 

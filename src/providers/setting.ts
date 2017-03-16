@@ -12,4 +12,6 @@ export class Setting {
 
   ngOnInit () {}
 
+  doInitApp () {}
+
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Platform } from 'ionic-angular'
 import { Splashscreen } from 'ionic-native'
+import { Setting, User } from '../imports/provider'
 
 @Component({
   template: `
@@ -13,7 +14,9 @@ import { Splashscreen } from 'ionic-native'
 export class AppComponent {
 
   constructor (
-    public platform: Platform
+    public platform: Platform,
+    public setting: Setting,
+    public user: User
   ) {}
 
   ngOnInit () {
@@ -23,6 +26,7 @@ export class AppComponent {
   }
 
   setApp () {
+    this.setting.doInitApp()
   }
 
   setPlugin () {
@@ -32,6 +36,7 @@ export class AppComponent {
   }
 
   setUser () {
+    this.user.doSyncCurrent()
   }
 
 }
