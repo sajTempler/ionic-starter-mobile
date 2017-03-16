@@ -10,15 +10,19 @@ class AppMenu extends MenuType {
   ) {
     super(plt)
 
-    const menuWidth = menu.width()
+    const content = new Animation(plt, menu.getContentElement())
+    const drawer = new Animation(plt, menu.getMenuElement())
+    const animation = [content, drawer]
+    const width = menu.width()
 
-    const appMenu = new Animation(plt, menu.getMenuElement())
-    appMenu.fromTo('translateX', -menuWidth / 4 + 'px', '0px')
-    this.ani.add(appMenu)
+    content
+      .fromTo('translateX', '0px', width + 'px')
+      .fromTo('scale', '1', '.8')
 
-    const appContent = new Animation(plt, menu.getContentElement())
-    appContent.fromTo('translateX', '0px', menuWidth + 'px').fromTo('scale', '1', '.8');
-    this.ani.add(appContent)
+    drawer
+      .fromTo('translateX', -width / 4 + 'px', '0px')
+
+    animation.forEach(animation => this.ani.add(animation))
   }
 
 }
