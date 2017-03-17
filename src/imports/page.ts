@@ -1,3 +1,7 @@
+export * from '../pages/discover/discover'
+export * from '../pages/errand/errand'
+export * from '../pages/food/food'
 export * from '../pages/login/login'
 export * from '../pages/main/main'
+export * from '../pages/mart/mart'
 export * from '../pages/sub/sub'

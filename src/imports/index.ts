@@ -1,6 +1,6 @@
 import { AppComponent } from '../app/app.component'
 import { AppNavComponent } from './component'
-import { LoginPage, MainPage, SubPage } from './page'
+import { DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage } from './page'
 import { Link, Timestamp } from './pipe'
 import { Api, Setting, User } from './provider'
 
@@ -8,6 +8,7 @@ export const App = {
   component: AppComponent,
   config: {
     backButtonIcon: 'ios-arrow-back',
+    backButtonText: '',
     hoverCSS: false,
     iconMode: 'ios',
     // locationStrategy: 'path',
@@ -18,7 +19,7 @@ export const App = {
   },
   entry: [
     // 页面
-    LoginPage, MainPage, SubPage,
+    DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage,
     // 应用
     AppComponent
   ],
@@ -29,8 +30,12 @@ export const App = {
     Link, Timestamp
   ],
   routes: [
+    { segment: 'discover', component: DiscoverPage },
+    { segment: 'errand', component: ErrandPage },
+    { segment: 'food', component: FoodPage },
     { segment: 'login', component: LoginPage },
     { segment: 'main', component: MainPage },
+    { segment: 'mart', component: MartPage },
     { segment: 'sub', component: SubPage }
   ],
   store: [
