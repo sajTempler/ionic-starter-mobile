@@ -1,6 +1,6 @@
 import { AppComponent } from '../app/app.component'
 import { AppNavComponent } from './component'
-import { DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage } from './page'
+import { DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage, TicketPage } from './page'
 import { Link, Timestamp } from './pipe'
 import { Api, Setting, User } from './provider'
 
@@ -19,7 +19,7 @@ export const App = {
   },
   entry: [
     // 页面
-    DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage,
+    DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage, TicketPage,
     // 应用
     AppComponent
   ],
@@ -36,7 +36,8 @@ export const App = {
     { segment: 'login', component: LoginPage },
     { segment: 'main', component: MainPage },
     { segment: 'mart', component: MartPage },
-    { segment: 'sub', component: SubPage }
+    { segment: 'sub', component: SubPage },
+    { segment: 'ticket', component: TicketPage }
   ],
   store: [
     // 服务

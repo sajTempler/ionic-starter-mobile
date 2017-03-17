@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { DiscoverPage, ErrandPage, FoodPage, MartPage } from '../../imports/page'
+import { DiscoverPage, ErrandPage, FoodPage, MartPage, TicketPage } from '../../imports/page'
 
 @Component({
   selector: 'page-main',
@@ -21,6 +21,10 @@ export class MainPage {
 
   get mart () {
     return MartPage
+  }
+
+  get ticket () {
+    return TicketPage
   }
 
 }
