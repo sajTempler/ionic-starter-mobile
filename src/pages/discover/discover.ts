@@ -1,22 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
 
-/*
-  Generated class for the Discover page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-discover',
   templateUrl: 'discover.html'
 })
-export class DiscoverPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DiscoverPage');
-  }
-
-}
+export class DiscoverPage {}
