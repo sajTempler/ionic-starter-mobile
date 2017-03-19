@@ -11,6 +11,7 @@ export const App = {
     backButtonText: '',
     hoverCSS: false,
     iconMode: 'ios',
+    ionPullIcon: 'arrow-round-down',
     // locationStrategy: 'path',
     menuType: 'menu',
     // mode: 'fd',

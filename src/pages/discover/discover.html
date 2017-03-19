@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -35,6 +35,25 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
+
+  <ion-refresher>
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list [virtualScroll]="[1,1,1,1,1,1,1,1,1,1]">
+    <ion-item *virtualItem="let item">
+      <ion-thumbnail item-left>
+        <ion-img src="http://placehold.it/56x56"></ion-img>
+      </ion-thumbnail>
+      <h2>商户</h2>
+      <h3>内容</h3>
+      <p>状态</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
 
