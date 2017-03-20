@@ -12,9 +12,8 @@ export const App = {
     hoverCSS: false,
     iconMode: 'ios',
     ionPullIcon: 'arrow-round-down',
-    // locationStrategy: 'path',
-    menuType: 'menu',
-    // mode: 'fd',
+    menuType: 'overlay',
+    mode: 'ios',
     pageTransition: 'ios',
     swipeBackEnabled: false
   },
