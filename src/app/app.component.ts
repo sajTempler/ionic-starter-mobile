@@ -6,10 +6,12 @@ import { Setting, User } from '../imports/provider'
 
 @Component({
   template: `
-    <ion-menu [content]="content" swipeEnabled="false">
-      <app-nav></app-nav>
-    </ion-menu>
-    <ion-nav #content [root]="root"></ion-nav>
+    <ion-split-pane>
+      <ion-menu [content]="content" swipeEnabled="false">
+        <app-nav></app-nav>
+      </ion-menu>
+      <ion-nav #content main [root]="root"></ion-nav>
+    </ion-split-pane>
   `
 })
 export class AppComponent {
