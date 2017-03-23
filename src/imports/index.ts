@@ -1,5 +1,6 @@
 import { AppComponent } from '../app/app.component'
 import { AppNavComponent } from './component'
+import { HTTP, SplashScreen } from './native'
 import { DiscoverPage, ErrandPage, FoodPage, LoginPage, MainPage, MartPage, SubPage, TicketPage } from './page'
 import { Link, Timestamp } from './pipe'
 import { Api, Setting, User } from './provider'
@@ -41,7 +42,9 @@ export const App = {
   ],
   store: [
     // 服务
-    Api, Setting, User
+    Api, Setting, User,
+    // 插件
+    HTTP, SplashScreen
   ]
 }
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Platform } from 'ionic-angular'
-import { Splashscreen } from 'ionic-native'
+import { SplashScreen } from '../imports/native'
 import { LoginPage, MainPage } from '../imports/page'
 import { Setting, User } from '../imports/provider'
 
@@ -19,6 +19,7 @@ export class AppComponent {
   constructor (
     public platform: Platform,
     public setting: Setting,
+    public splash: SplashScreen,
     public user: User
   ) {}
 
@@ -28,7 +29,7 @@ export class AppComponent {
       this.setNative(),
       this.setUser()
     ])
-    .then(() => Splashscreen.hide())
+    .then(() => this.splash.hide())
   }
 
   get root () {

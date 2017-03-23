@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Headers, Http, RequestOptionsArgs } from '@angular/http'
-import { HTTP } from 'ionic-native'
 import { json2url } from '../imports'
+import { HTTP } from '../imports/native'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/toPromise'
 
@@ -13,7 +13,8 @@ export class Api {
   url: string
 
   constructor (
-    public http: Http
+    public native: HTTP,
+    public web: Http
   ) {
     this.postOptions = {
       headers: new Headers({'Content-Type': 'application/x-www-form-urlencoded'})
@@ -34,13 +35,13 @@ export class Api {
   }
 
   nativeGet (url, data) {
-    return HTTP.get(url, data || {}, {})
+    return this.native.get(url, data || {}, {})
       .then(res => JSON.parse(res.data))
   }
 
   webGet (url, data) {
     data && (url = url + '?' + json2url(data))
-    return this.http.get(url)
+    return this.web.get(url)
       .map(res => res.json())
       .toPromise()
   }
@@ -51,12 +52,12 @@ export class Api {
   }
 
   nativePost (url, data) {
-    return HTTP.post(url, data || {}, {})
+    return this.native.post(url, data || {}, {})
       .then(res => JSON.parse(res.data))
   }
 
   webPost (url, data) {
-    return this.http.post(url, json2url(data), this.postOptions)
+    return this.web.post(url, json2url(data), this.postOptions)
       .map(res => res.json())
       .toPromise()
   }
