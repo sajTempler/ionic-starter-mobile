@@ -1,8 +1,9 @@
 import { Component } from '@angular/core'
 import { Platform } from 'ionic-angular'
-import { SplashScreen } from '../imports/native'
-import { LoginPage, MainPage } from '../imports/page'
-import { Setting, User } from '../imports/provider'
+import { SplashScreen } from '../natives'
+import { Setting, User } from '../providers'
+
+import { TabsPage } from './tabs/tabs'
 
 @Component({
   template: `
@@ -33,7 +34,8 @@ export class AppComponent {
   }
 
   get root () {
-    return this.user.onAir ? MainPage : LoginPage
+    // return this.user.onAir ? MainPage : LoginPage
+    return TabsPage
   }
 
   setApp () {

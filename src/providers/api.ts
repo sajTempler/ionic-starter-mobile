@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Headers, Http, RequestOptionsArgs } from '@angular/http'
-import { json2url } from '../imports'
-import { HTTP } from '../imports/native'
+import { HTTP } from '../natives'
+import { json2url } from '../utils'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/toPromise'
 

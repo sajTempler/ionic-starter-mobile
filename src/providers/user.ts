@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Api } from '../imports/provider'
+import { Api } from './api'
 
 @Injectable()
 export class User {
