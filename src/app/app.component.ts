@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular'
 import { SplashScreen } from '../natives'
 import { Setting, User } from '../providers'
 
-import { TabsPage } from './tabs/tabs'
+import { PageOne } from '../pages/page-one/page-one'
 
 @Component({
   template: `
@@ -34,8 +34,7 @@ export class AppComponent {
   }
 
   get root () {
-    // return this.user.onAir ? MainPage : LoginPage
-    return TabsPage
+    return PageOne
   }
 
   setApp () {

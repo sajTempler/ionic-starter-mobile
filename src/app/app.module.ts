@@ -9,7 +9,7 @@ import { Link, Timestamp } from '../pipes'
 import { Api, Setting, User } from '../providers'
 import { Config } from '../utils'
 
-import { TabsPageModule } from './tabs/tabs.module'
+import { PageOneModule } from '../pages/page-one/page-one.module'
 
 @NgModule({
   bootstrap: [ IonicApp ],
@@ -21,7 +21,7 @@ import { TabsPageModule } from './tabs/tabs.module'
     Link, Timestamp
   ],
   imports: [
-    TabsPageModule,
+    PageOneModule,
 
     BrowserModule,
     HttpModule,
