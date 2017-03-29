@@ -31,14 +31,14 @@ export const App = {
     Link, Timestamp
   ],
   routes: [
-    { segment: 'discover', component: DiscoverPage },
-    { segment: 'errand', component: ErrandPage },
-    { segment: 'food', component: FoodPage },
-    { segment: 'login', component: LoginPage },
-    { segment: 'main', component: MainPage },
-    { segment: 'mart', component: MartPage },
-    { segment: 'sub', component: SubPage },
-    { segment: 'ticket', component: TicketPage }
+    // { segment: 'discover', component: DiscoverPage },
+    // { segment: 'errand', component: ErrandPage },
+    // { segment: 'food', component: FoodPage },
+    // { segment: 'login', component: LoginPage },
+    // { segment: 'main', component: MainPage },
+    // { segment: 'mart', component: MartPage },
+    // { segment: 'sub', component: SubPage },
+    // { segment: 'ticket', component: TicketPage }
   ],
   store: [
     // 服务
