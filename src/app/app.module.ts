@@ -5,14 +5,15 @@ import { IonicStorageModule } from '@ionic/storage'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
 import { AppComponent, AppNavComponent } from '../components'
 import { HTTP, SplashScreen } from '../natives'
+import { MainModule } from '../pages'
 import { Link, Timestamp } from '../pipes'
 import { Api, Setting, User } from '../providers'
 import { Config } from '../utils'
 
-import { PageOneModule } from '../pages/page-one/page-one.module'
-
 @NgModule({
-  bootstrap: [ IonicApp ],
+  bootstrap: [
+    IonicApp
+  ],
   declarations: [
     AppComponent,
     // 组件
@@ -21,12 +22,11 @@ import { PageOneModule } from '../pages/page-one/page-one.module'
     Link, Timestamp
   ],
   imports: [
-    PageOneModule,
-
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(AppComponent, Config),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    MainModule
   ],
   providers: [
     // 服务

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core'
 import { Platform } from 'ionic-angular'
 import { SplashScreen } from '../natives'
+import { Main } from '../pages'
 import { Setting, User } from '../providers'
-
-import { PageOne } from '../pages/page-one/page-one'
 
 @Component({
   template: `
@@ -34,7 +33,7 @@ export class AppComponent {
   }
 
   get root () {
-    return PageOne
+    return Main
   }
 
   setApp () {
