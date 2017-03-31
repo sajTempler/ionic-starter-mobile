@@ -31,6 +31,9 @@
     "@ionic/app-scripts": "1.2.5",
     "typescript": "~2.2.1"
   },
+  "config": {
+    "ionic_sass": "./config/sass.config.js"
+  },
   "cordovaPlugins": [
     "cordova-plugin-console",
     "cordova-plugin-crosswalk-webview",
