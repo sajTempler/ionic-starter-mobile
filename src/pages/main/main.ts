@@ -17,7 +17,7 @@ import { IonicPage } from 'ionic-angular'
 
 
     <ion-content padding>
-
+      <ion-icon name="ionic"></ion-icon>
     </ion-content>
   `
 })
