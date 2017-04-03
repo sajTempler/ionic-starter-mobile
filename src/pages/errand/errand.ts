@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { IonicPage } from 'ionic-angular'
+import { IonicPage, reorderArray } from 'ionic-angular'
 
 @IonicPage({
   name: 'errand'
@@ -8,4 +8,16 @@ import { IonicPage } from 'ionic-angular'
   selector: 'page-errand',
   templateUrl: 'errand.html'
 })
-export class ErrandPage {}
+export class ErrandPage {
+
+  items: any
+
+  ngOnInit () {
+    this.items = [ 1, 2, 3, 4, 5 ]
+  }
+
+  setItems ($event) {
+    this.items = reorderArray(this.items, $event)
+  }
+
+}

@@ -12,4 +12,20 @@
 
 <ion-content>
 
+  <ion-list reorder="true" (ionItemReorder)="setItems($event)">
+
+    <ion-item-sliding *ngFor="let item of items">
+      <ion-item detail-push>
+        <ion-icon name="pin" item-left></ion-icon>
+        {{ '地点 - ' + item }}
+        <ion-note item-right>请选择</ion-note>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger">删除</button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
 </ion-content>
