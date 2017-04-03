@@ -21,4 +21,4 @@ import { IonicPage } from 'ionic-angular'
     </ion-content>
   `
 })
-export class Main {}
+export class MainPage {}

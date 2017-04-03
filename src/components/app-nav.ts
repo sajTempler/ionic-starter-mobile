@@ -5,7 +5,7 @@ import { Component } from '@angular/core'
   template: `
     <ion-content padding>
 
-      <a [href]="'sub'|link" ion-button menuClose>go to sub</a>
+      <a [href]="'login'|link" ion-button menuClose>go to sub</a>
 
     </ion-content>
   `

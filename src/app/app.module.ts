@@ -5,7 +5,6 @@ import { IonicStorageModule } from '@ionic/storage'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
 import { AppComponent, AppNavComponent } from '../components'
 import { HTTP, SplashScreen } from '../natives'
-import { MainModule } from '../pages'
 import { Link, Timestamp } from '../pipes'
 import { Api, Setting, User } from '../providers'
 import { Config } from '../utils'
@@ -25,8 +24,7 @@ import { Config } from '../utils'
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(AppComponent, Config),
-    IonicStorageModule.forRoot(),
-    MainModule
+    IonicStorageModule.forRoot()
   ],
   providers: [
     // 服务

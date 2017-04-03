@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { Platform } from 'ionic-angular'
 import { SplashScreen } from '../natives'
-import { Main } from '../pages'
 import { Setting, User } from '../providers'
 
 @Component({
@@ -33,7 +32,7 @@ export class AppComponent {
   }
 
   get root () {
-    return Main
+    return this.user.onAir ? 'main' : 'login'
   }
 
   setApp () {
