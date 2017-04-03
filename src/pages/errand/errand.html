@@ -12,7 +12,7 @@
 
 <ion-content>
 
-  <ion-list reorder="true" (ionItemReorder)="setItems($event)">
+  <ion-list reorder (ionItemReorder)="setItems($event)">
 
     <ion-item-sliding *ngFor="let item of items">
       <ion-item detail-push>
