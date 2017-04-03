@@ -2,10 +2,10 @@ import { Component } from '@angular/core'
 import { IonicPage } from 'ionic-angular'
 
 @IonicPage({
-  name: 'main'
+  name: 'ticket'
 })
 @Component({
-  selector: 'page-main',
-  templateUrl: 'main.html'
+  selector: 'page-ticket',
+  templateUrl: 'ticket.html'
 })
-export class MainPage {}
+export class TicketPage {}

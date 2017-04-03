@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>呱呱王</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-slides autoplay="2000" effect="coverflow" loop="true" pager="true" paginationType="fraction" parallax="true" style="height:160px">
+    <ion-slide>
+      <img src="http://placehold.it/320x160">
+    </ion-slide>
+    <ion-slide>
+      <img src="http://placehold.it/320x160">
+    </ion-slide>
+    <ion-slide>
+      <img src="http://placehold.it/320x160">
+    </ion-slide>
+    <ion-slide>
+      <img src="http://placehold.it/320x160">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-toolbar>
+    <ion-title>吃货圈</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-refresher>
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <ion-img src="http://placehold.it/56x56"></ion-img>
+      </ion-thumbnail>
+      <h2>商户</h2>
+      <h3>内容</h3>
+      <p>状态</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
+
+
+<ion-fab right bottom>
+
+  <button ion-fab mini (click)="setScroll()">
+    <ion-icon name="arrow-round-up"></ion-icon>
+  </button>
+
+</ion-fab>

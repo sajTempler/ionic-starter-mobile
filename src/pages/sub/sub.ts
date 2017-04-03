@@ -3,20 +3,20 @@ import { IonicPage } from 'ionic-angular'
 import { User } from '../../providers'
 
 @IonicPage({
-  name: 'login'
+  name: 'sub'
 })
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html'
+  selector: 'page-sub',
+  templateUrl: 'sub.html'
 })
-export class LoginPage {
+export class SubPage {
 
   constructor (
     public user: User
   ) {}
 
   setUser () {
-    this.user.onAir = true
+    this.user.onAir = false
   }
 
 }
