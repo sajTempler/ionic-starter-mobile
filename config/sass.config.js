@@ -9,6 +9,7 @@ config.autoprefixer = {
 }
 
 config.excludeFiles = [
+  // /\.(ios).(scss)$/i,
   /\.(md).(scss)$/i,
   /\.(wp).(scss)$/i
 ]
