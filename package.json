@@ -32,7 +32,6 @@
   },
   "config": {
     "ionic_experimental_manual_treeshaking": true,
-    "ionic_experimental_purge_decorators": true,
     "ionic_sass": "./config/sass.config.js"
   },
   "cordovaPlugins": [
