@@ -40,8 +40,8 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-list>
-    <ion-item>
+  <ion-list [virtualScroll]="[1,1,1,1,1,1,1,1,1,1,1]">
+    <ion-item *virtualItem="let item">
       <ion-thumbnail item-left>
         <ion-img src="http://placehold.it/56x56"></ion-img>
       </ion-thumbnail>
