@@ -1,8 +1,16 @@
 ion-toolbar {
   min-height: $toolbar-height;
 
+  ion-buttons {
+    margin: 0;
+  }
+
   ion-icon {
     font-size: $toolbar--icon-size;
     width: $toolbar--icon-width;
+  }
+
+  [right] {
+    order: 1;
   }
 }

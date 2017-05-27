@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { IonicPage, NavController } from 'ionic-angular'
 
 /**
  * Generated class for the WelcomePage page.
@@ -14,11 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor (
+    public nav: NavController
+  ) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad WelcomePage');
+  setRoot () {
+    this.nav.setRoot('MainPage')
   }
 
 }

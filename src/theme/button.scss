@@ -1,5 +1,7 @@
 ion-button {
   background: initial;
+  font-size: $button-font;
+  min-height: $button-height;
 }
 
 [ion-button],

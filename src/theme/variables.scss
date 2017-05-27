@@ -3,6 +3,11 @@ $font-size: 32px;
 $link-color: #000;
 
 
+// ion-button
+$button-font: 24px;
+$button-height: 72px;
+
+
 // ion-item
 $item-border: 1px solid rgba(0,0,0,.025);
 $item-height: 64px;
@@ -19,10 +24,10 @@ $menu-width: 480px;
 
 
 // ion-title
-$title-font-size: $font-size;
+$title-font: $font-size;
 
 
 // ion-toolbar
 $toolbar-height: 100px;
-$toolbar--icon-size: 56px;
+$toolbar--icon-size: $font-size;
 $toolbar--icon-width: 80px;

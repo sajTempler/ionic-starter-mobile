@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { App } from 'ionic-angular'
 
 /**
  * Generated class for the AppNavComponent component.
@@ -12,11 +13,12 @@ import { Component } from '@angular/core';
 })
 export class AppNavComponent {
 
-  text: string;
+  constructor (
+    public app: App
+  ) {}
 
-  constructor() {
-    console.log('Hello AppNavComponent Component');
-    this.text = 'Hello World';
+  setPage (page) {
+    this.app.getRootNav().push(page)
   }
 
 }

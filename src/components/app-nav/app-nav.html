@@ -11,8 +11,9 @@
 <ion-content>
 
   <ion-list>
-    <ion-item>button</ion-item>
-    <ion-item>content</ion-item>
+    <ion-item (click)="setPage('AlertPage')" menuClose>alert</ion-item>
+    <ion-item (click)="setPage('ButtonPage')" menuClose>button</ion-item>
+    <ion-item (click)="setPage('ContentPage')" menuClose>content</ion-item>
   </ion-list>
 
 </ion-content>
