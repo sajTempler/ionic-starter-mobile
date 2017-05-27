@@ -6,13 +6,15 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
 import { AppComponent } from './app.component'
 import * as Native from '../natives'
 import * as Provider from '../providers'
+import { AppNavComponent } from '../components/app-nav/app-nav';
 
 @NgModule({
   bootstrap: [
     IonicApp
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    AppNavComponent
   ],
   imports: [
     BrowserModule,
