@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { AlertController, IonicPage } from 'ionic-angular'
 
 /**
  * Generated class for the AlertPage page.
@@ -14,11 +14,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AlertPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor (
+    public alert: AlertController
+  ) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AlertPage');
+  setBasic () {
+    this.alert.create({
+      title: 'Low battery',
+      subTitle: '10% of battery remaining',
+      message: 'what the',
+      buttons: ['Dismiss']
+    })
+    .present()
   }
 
 }

@@ -1,0 +1,34 @@
+ion-alert {
+
+  .alert-wrapper {
+    background: #f8f8f8;
+    border-radius: 16px;
+    max-width: 480px;
+  }
+
+  .alert-head {
+    text-align: center;
+  }
+
+  .alert-title {
+    font-size: 24px;
+  }
+
+  .alert-sub-title {
+    font-size: 16px;
+  }
+
+  .alert-message {
+
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .alert-button {
+    flex: 1 1 auto;
+
+    &-group {
+      border-top: 1px solid;
+    }
+  }
+}
