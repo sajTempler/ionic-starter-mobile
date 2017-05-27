@@ -17,7 +17,7 @@ config.excludeFiles = [
 config.postCssPlugins = [
   require('postcss-pxtorem')({
     propList: ['*'],
-    rootValue: 100,
+    rootValue: 117.1875,
     selectorBlackList: [/^html$/]
   })
 ]
