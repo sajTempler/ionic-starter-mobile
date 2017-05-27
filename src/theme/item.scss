@@ -1,0 +1,11 @@
+ion-item {
+
+  &.item-block {
+    min-height: $item-height;
+    border-bottom: $item-border;
+  }
+}
+
+[ion-item] {
+  @extend ion-item;
+}

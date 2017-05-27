@@ -1,0 +1,7 @@
+ion-title {
+  @extend .z;
+  bottom: 0;
+  font-size: $title-font-size;
+  pointer-events: none;
+  text-align: center;
+}

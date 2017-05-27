@@ -12,17 +12,14 @@ class AppMenu extends MenuType {
   ) {
     super(plt)
 
-    const backdrop = new Animation(plt, menu.getBackdropElement())
     const content = new Animation(plt, menu.getContentElement())
     const drawer = new Animation(plt, menu.getMenuElement())
-    const animation = [backdrop, content, drawer]
+    const animation = [content, drawer]
     const width = menu.width()
-
-    backdrop
-      .fromTo('opacity', 0.01, 0.35)
 
     content
       .fromTo('translateX', '0px', width + 'px')
+      .fromTo('scale', 1, .8)
 
     drawer
       .fromTo('translateX', -width / 3 + 'px', '0px')
