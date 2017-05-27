@@ -1,0 +1,34 @@
+ion-tabs {
+
+  .button-effect {
+    @extend .z;
+    background: rgba(0,0,0,.1);
+    border-radius: 50%;
+  }
+
+  .tab-button {
+    height: $tabs-height;
+
+    &-text {
+      font-size: $tabs-font;
+    }
+  }
+
+  .tab-highlight {
+    @extend .z;
+    background: $tabs-highlight-color;
+    height: $tabs-highlight-height;
+    display: block;
+    transform-origin: 0;
+    transition-duration: .3s;
+    width: 1px;
+  }
+
+  &[tabsPlacement=top] .tab-highlight {
+    bottom: 0;
+    top: auto;
+  }
+
+}
+
+
