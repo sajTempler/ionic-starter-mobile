@@ -9,15 +9,15 @@ config.autoprefixer = {
 }
 
 config.excludeFiles = [
-  // /\.(ios).(scss)$/i,
-  // /\.(md).(scss)$/i,
+  /\.(ios).(scss)$/i,
+  /\.(md).(scss)$/i,
   /\.(wp).(scss)$/i
 ]
 
 config.postCssPlugins = [
   require('postcss-pxtorem')({
     propList: ['*'],
-    rootValue: 10,
+    rootValue: 100,
     selectorBlackList: [/^html$/]
   })
 ]
