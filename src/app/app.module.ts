@@ -22,6 +22,7 @@ import { AppNavComponent } from '../components/app-nav/app-nav';
     IonicModule.forRoot(AppComponent, {
       activator: 'ripple',
       api: isDevMode() ? '/api' : 'http://production',
+      backButtonIcon: 'ios-arrow-round-back',
       backButtonText: '',
       debug: isDevMode(),
       hoverCSS: false,
