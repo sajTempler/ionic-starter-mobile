@@ -1,63 +1,34 @@
 import { Injectable } from '@angular/core'
-import { Headers, Http, RequestOptionsArgs } from '@angular/http'
-import { HTTP } from '../natives'
-import { json2url } from '../utils'
+import { Headers, Http } from '@angular/http'
+import { Config } from 'ionic-angular'
+import * as Util from '../utils'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/toPromise'
 
 @Injectable()
 export class Api {
 
-  postOptions: RequestOptionsArgs
-  type: string
-  url: string
-
   constructor (
-    public native: HTTP,
-    public web: Http
+    public config: Config,
+    public http: Http
   ) {
-    this.postOptions = {
-      headers: new Headers({'Content-Type': 'application/x-www-form-urlencoded'})
-    }
-    this.type = 'native'
-    this.url = 'http://production'
-    window['cordova'] || this.ngOnInit()
+    config.get('debug') && this.ngOnInit()
   }
 
-  ngOnInit () {
-    this.type = 'web'
-    this.url = 'http://develop'
-  }
+  ngOnInit () {}
 
   get (url, data?) {
-    url = this.url + url
-    return this[`${this.type}Get`](url, data)
-  }
-
-  nativeGet (url, data) {
-    return this.native.get(url, data || {}, {})
-      .then(res => JSON.parse(res.data))
-  }
-
-  webGet (url, data) {
-    data && (url = url + '?' + json2url(data))
-    return this.web.get(url)
+    url = this.config.get('api') + url
+    data && (url = url + '?' + Util.json2url(data))
+    return this.http.get(url)
       .map(res => res.json())
       .toPromise()
   }
 
-  post (url, data) {
-    url = this.url + url
-    return this[`${this.type}Post`](url, data)
-  }
-
-  nativePost (url, data) {
-    return this.native.post(url, data || {}, {})
-      .then(res => JSON.parse(res.data))
-  }
-
-  webPost (url, data) {
-    return this.web.post(url, json2url(data), this.postOptions)
+  post (url, data?) {
+    url = this.config.get('api') + url
+    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' })
+    return this.http.post(url, Util.json2url(data), { headers })
       .map(res => res.json())
       .toPromise()
   }

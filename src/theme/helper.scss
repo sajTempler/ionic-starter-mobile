@@ -1,12 +1,24 @@
 .x {
   float: left;
   line-height: inherit;
+
+  &\+ {
+    @extend .x;
+    float: right;
+  }
 }
 
-.y:after {
-  clear: both;
-  content: '';
-  display: table;
+.y {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+  &\+ {
+    @extend .y;
+    margin: 0 auto;
+  }
 }
 
 .z {
@@ -14,17 +26,11 @@
   position: absolute;
   right: 0;
   top: 0;
-}
 
-.l {
-  margin: 0 auto;
-}
-
-.r {
-  float: right;
-}
-
-.w {
-  height: 100%;
-  overflow-y: auto;
+  &\+ {
+    @extend .z;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

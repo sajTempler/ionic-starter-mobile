@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
+import { Storage } from '@ionic/storage'
 import { Platform } from 'ionic-angular'
-import { SplashScreen } from '../natives'
-import { Setting, User } from '../providers'
+import * as Native from '../natives'
 
 @Component({
   template: `
@@ -9,7 +9,7 @@ import { Setting, User } from '../providers'
       <ion-menu [content]="content" swipeEnabled="false">
         <app-nav></app-nav>
       </ion-menu>
-      <ion-nav #content main [root]="root"></ion-nav>
+      <ion-nav #content main root="WelcomePage"></ion-nav>
     </ion-split-pane>
   `
 })
@@ -17,34 +17,24 @@ export class AppComponent {
 
   constructor (
     public platform: Platform,
-    public setting: Setting,
-    public splash: SplashScreen,
-    public user: User
+    public splash: Native.SplashScreen,
+    public storage: Storage
   ) {}
 
   ngOnInit () {
-    Promise.all([
-      this.setApp(),
-      this.setNative(),
-      this.setUser()
-    ])
+    this.platform.ready()
+    .then(res => this[res]())
     .then(() => this.splash.hide())
   }
 
-  get root () {
-    return this.user.onAir ? 'main' : 'login'
+  cordova () {
+    return Promise.all([
+      this.storage.ready()
+    ])
   }
 
-  setApp () {
-    return this.setting.doInitApp()
-  }
-
-  setNative () {
-    return this.platform.ready()
-  }
-
-  setUser () {
-    return this.user.doSyncCurrent()
+  dom () {
+    console.log('https://github.com/fundo90/ionic-starter-mobile')
   }
 
 }

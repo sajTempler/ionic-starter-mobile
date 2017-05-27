@@ -1,36 +1,46 @@
-import { NgModule, ErrorHandler } from '@angular/core'
+import { ErrorHandler, isDevMode, NgModule } from '@angular/core'
 import { HttpModule } from '@angular/http'
 import { BrowserModule } from '@angular/platform-browser'
 import { IonicStorageModule } from '@ionic/storage'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
-import { AppComponent, AppNavComponent } from '../components'
-import { HTTP, SplashScreen } from '../natives'
-import { Link, Timestamp } from '../pipes'
-import { Api, Setting, User } from '../providers'
-import { Config } from '../utils'
+import { AppComponent } from './app.component'
+import * as Native from '../natives'
+import * as Provider from '../providers'
 
 @NgModule({
   bootstrap: [
     IonicApp
   ],
   declarations: [
-    AppComponent,
-    // 组件
-    AppNavComponent,
-    // 管道
-    Link, Timestamp
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(AppComponent, Config),
-    IonicStorageModule.forRoot()
+    IonicModule.forRoot(AppComponent, {
+      activator: 'ripple',
+      api: isDevMode() ? '/api' : 'http://production',
+      backButtonText: '',
+      debug: true || !window['cordova'],
+      hoverCSS: false,
+      iconMode: 'ios',
+      pageTransition: 'ios',
+      preloadModules: !!window['cordova'],
+      swipeBackEnabled: false,
+      tabsHideOnSubPages: true,
+      tabsHighlight: true
+    }),
+    IonicStorageModule.forRoot({
+      name: 'ionic2mobile',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   providers: [
     // 服务
-    Api, Setting, User,
+    Provider.Api,
     // 插件
-    HTTP, SplashScreen,
+    Native.SplashScreen,
+    Native.StatusBar,
     // 异常
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

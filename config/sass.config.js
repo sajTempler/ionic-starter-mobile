@@ -10,8 +10,17 @@ config.autoprefixer = {
 
 config.excludeFiles = [
   // /\.(ios).(scss)$/i,
-  /\.(md).(scss)$/i,
+  // /\.(md).(scss)$/i,
   /\.(wp).(scss)$/i
+]
+
+config.postCssPlugins = [
+  require('postcss-pxtorem')({
+    minPixelValue: 1.1,
+    propList: ['*'],
+    rootValue: 112.5,
+    selectorBlackList: [/^html$/]
+  })
 ]
 
 module.exports = config
