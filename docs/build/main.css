@@ -12550,8 +12550,8 @@ ion-navbar[primary] .toolbar-background {
   left: auto;
   right: 0;
   width: 0.85333rem;
-  -webkit-transform: rotate(3deg) translate(0, -0.03413rem);
-          transform: rotate(3deg) translate(0, -0.03413rem);
+  -webkit-transform: rotate(3deg) translateY(-4PX);
+          transform: rotate(3deg) translateY(-4PX);
 }
 
 ion-tabs .button-effect {
