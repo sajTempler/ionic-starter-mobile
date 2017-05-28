@@ -1,3 +1,4 @@
+import { isDevMode } from '@angular/core'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { Animation, Menu, MenuController, MenuType, Platform } from 'ionic-angular'
 import { AppModule } from './app.module'
@@ -30,4 +31,5 @@ class AppMenu extends MenuType {
 }
 
 MenuController.registerType('menu', AppMenu)
+window['debug'] = isDevMode()
 platformBrowserDynamic().bootstrapModule(AppModule)

@@ -1,30 +1,30 @@
-import { ErrorHandler, isDevMode, NgModule } from '@angular/core'
+import { ErrorHandler, NgModule } from '@angular/core'
 import { HttpModule } from '@angular/http'
 import { BrowserModule } from '@angular/platform-browser'
 import { IonicStorageModule } from '@ionic/storage'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
 import { AppComponent } from './app.component'
+import { ComponentModule } from '../components/component.module'
 import * as Native from '../natives'
 import * as Provider from '../providers'
-import { AppNavComponent } from '../components/app-nav/app-nav';
 
 @NgModule({
   bootstrap: [
     IonicApp
   ],
   declarations: [
-    AppComponent,
-    AppNavComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    ComponentModule,
     HttpModule,
     IonicModule.forRoot(AppComponent, {
       activator: 'ripple',
-      api: isDevMode() ? '/api' : 'http://production',
+      api: window['debug'] ? '/api' : 'http://production',
       backButtonIcon: 'ios-arrow-round-back',
       backButtonText: '',
-      debug: isDevMode(),
+      debug: window['debug'],
       hoverCSS: false,
       iconMode: 'ios',
       menuType: 'menu',
