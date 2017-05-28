@@ -1,7 +1,64 @@
 ion-button {
-  background: initial;
+  background: $button-background;
+  border: $button-border;
+  border-radius: $button-radius;
+  color: inherit;
   font-size: $button-font;
   min-height: $button-height;
+  min-width: 360px;
+
+  &.bar-button {
+    background: initial;
+    border: 0;
+    min-width: auto;
+  }
+
+  &[color] {
+    color: #fff;
+  }
+
+  &[color=red] {
+    background: $color-red;
+
+    &[outline] {
+      color: $color-red;
+    }
+  }
+
+  &[color=green] {
+    background: $color-green;
+
+    &[outline] {
+      color: $color-green;
+    }
+  }
+
+  &[color=black] {
+    background: $color-black;
+
+    &[outline] {
+      color: $color-black;
+    }
+  }
+
+  &[large] {
+    font-size: 36px;
+    min-height: 94px;
+    max-width: 670px;
+  }
+
+  &[outline] {
+    background: transparent;
+    border-color: currentColor;
+  }
+
+  &[small] {
+    border-radius: 6px;
+    font-size: 26px;
+    min-height: 60px;
+    min-width: auto;
+    padding: 0 34px;
+  }
 }
 
 [ion-button],

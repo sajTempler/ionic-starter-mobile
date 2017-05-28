@@ -1,18 +1,26 @@
 app-nav {
   .header {
     padding-left: 28px;
+    text-transform: uppercase;
   }
 
   .content {
 
+    .label {
+      color: #666;
+      font-size: 28px;
+      padding-left: 28px;
+    }
+
     .scroll-content {
-      margin: 160px 0 80px;
+      margin: 114px 0;
     }
   }
 
   .footer {
-    padding: 12px 28px;
+    padding: 0 0 30px 28px;
     a {
+      color: #b2b2b2;
       font-size: 20px;
       white-space: nowrap;
     }

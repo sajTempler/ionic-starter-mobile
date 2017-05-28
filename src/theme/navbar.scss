@@ -1,4 +1,12 @@
 ion-navbar {
   @extend ion-toolbar;
   height: $toolbar-height;
+
+  &[primary] {
+    color: #fff;
+
+    .toolbar-background {
+      background: linear-gradient(0deg, rgba(44,45,49,.9), rgba(16,16,19,.9));
+    }
+  }
 }

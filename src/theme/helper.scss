@@ -9,6 +9,8 @@
 }
 
 .y {
+  display: block;
+
   &:after {
     clear: both;
     content: '';

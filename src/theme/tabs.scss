@@ -2,12 +2,24 @@ ion-tabs {
 
   .button-effect {
     @extend .z;
-    background: rgba(0,0,0,.1);
+    background: #eaeaea;
     border-radius: 50%;
   }
 
   .tab-button {
+    background: #F7F7FA;
+    border-top: 1PX solid $border;
+    color: #7F8389;
     height: $tabs-height;
+
+    &[aria-selected=true] {
+      color: #09BB07;
+    }
+
+    &-icon {
+      font-size: 54px;
+      height: 54px;
+    }
 
     &-text {
       font-size: $tabs-font;
@@ -17,18 +29,44 @@ ion-tabs {
   .tab-highlight {
     @extend .z;
     background: $tabs-highlight-color;
-    height: $tabs-highlight-height;
     display: block;
     transform-origin: 0;
     transition-duration: .3s;
     width: 1px;
   }
 
-  &[tabsPlacement=top] .tab-highlight {
-    bottom: 0;
-    top: auto;
+  &[tabsLayout=icon-hide] {
+
+    .tab-button {
+      color: #353535;
+
+      &[aria-selected=true] {
+        color: $color-green;
+      }
+
+      &-text {
+        font-size: 28px;
+      }
+    }
+
+    .tab-highlight {
+      height: $tabs-highlight-height;
+    }
   }
 
+  &[tabsPlacement=top] {
+
+    .tab-button {
+      background: #FAFAFA;
+      border-bottom: 1PX solid $border;
+      border-top: 0;
+    }
+
+    .tab-highlight {
+      bottom: 0;
+      top: auto;
+    }
+  }
 }
 
 

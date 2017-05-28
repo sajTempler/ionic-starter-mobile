@@ -1,6 +1,12 @@
 ion-toolbar {
   min-height: $toolbar-height;
 
+  button {
+    background: initial;
+    border: 0;
+    min-width: auto;
+  }
+
   ion-buttons {
     margin: 0;
   }

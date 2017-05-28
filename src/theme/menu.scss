@@ -5,4 +5,8 @@ ion-menu {
     display: block;
     opacity: 1;
   }
+
+  + .menu-content-open {
+    box-shadow: 0 6px 30px rgba(0,0,0,.1);
+  }
 }
