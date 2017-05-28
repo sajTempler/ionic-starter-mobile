@@ -1,34 +1,32 @@
 ion-alert {
 
   .alert-wrapper {
-    background: #f8f8f8;
-    border-radius: 16px;
-    max-width: 480px;
-  }
-
-  .alert-head {
+    background: #fff;
+    border-radius: 8px;
     text-align: center;
+    width: 560px;
   }
 
   .alert-title {
-    font-size: 24px;
-  }
-
-  .alert-sub-title {
-    font-size: 16px;
+    font-size: 36px;
+    padding-top: 50px;
   }
 
   .alert-message {
-
-    font-size: 24px;
-    text-align: center;
+    color: #888;
+    font-size: 30px;
+    padding-top: 18px;
   }
 
   .alert-button {
+    color: #02BB00;
     flex: 1 1 auto;
+    font-size: 36px;
+    height: 100px;
 
     &-group {
-      border-top: 1px solid;
+      border-top: 1PX solid #e5e5e5;
+      margin-top: 30px;
     }
   }
 }

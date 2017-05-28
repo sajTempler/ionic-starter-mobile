@@ -20,10 +20,9 @@ export class AlertPage {
 
   setBasic () {
     this.alert.create({
-      title: 'Low battery',
-      subTitle: '10% of battery remaining',
-      message: 'what the',
-      buttons: ['Dismiss']
+      title: '标题',
+      message: '告知当前状态，信息和解决方法',
+      buttons: ['确定']
     })
     .present()
   }

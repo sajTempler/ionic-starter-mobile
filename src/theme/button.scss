@@ -7,6 +7,7 @@ ion-button {
   min-height: $button-height;
   min-width: 360px;
 
+  &.alert-button,
   &.bar-button {
     background: initial;
     border: 0;
