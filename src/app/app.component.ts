@@ -36,9 +36,8 @@ export class AppComponent {
   }
 
   dom () {
-    console.log('https://github.com/fundo90/ionic-starter-mobile')
-
     Pace.start()
+    console.log('https://github.com/fundo90/ionic-starter-mobile')
   }
 
 }
