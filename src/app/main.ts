@@ -4,7 +4,6 @@ import { Animation, Menu, MenuController, MenuType, Platform } from 'ionic-angul
 import { AppModule } from './app.module'
 import 'intl'
 import 'intl/locale-data/jsonp/en'
-import 'pace-progress'
 
 class AppMenu extends MenuType {
 

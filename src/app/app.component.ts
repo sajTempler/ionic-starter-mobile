@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Storage } from '@ionic/storage'
 import { App, Platform } from 'ionic-angular'
+import Pace from 'pace-progress'
 import * as Native from '../natives'
 
 @Component({
@@ -37,21 +38,7 @@ export class AppComponent {
   dom () {
     console.log('https://github.com/fundo90/ionic-starter-mobile')
 
-    const events = [
-      'viewDidEnter',
-      'viewDidLeave',
-      'viewDidLoad',
-      'viewWillEnter',
-      'viewWillLeave',
-      'viewWillUnload'
-    ]
-
-    events.forEach(
-      event => this.app[event].subscribe(
-        () => {}
-        // res => console.log(event, new Date, res)
-      )
-    )
+    Pace.start()
   }
 
 }
