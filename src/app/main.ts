@@ -31,5 +31,5 @@ class AppMenu extends MenuType {
 }
 
 MenuController.registerType('menu', AppMenu)
-window['debug'] = isDevMode()
 platformBrowserDynamic().bootstrapModule(AppModule)
+window[';'] = isDevMode()

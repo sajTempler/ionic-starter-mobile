@@ -22,10 +22,10 @@ import * as Provider from '../providers'
     HttpModule,
     IonicModule.forRoot(AppComponent, {
       activator: 'ripple',
-      api: window['debug'] ? '/api' : 'http://production',
+      api: window[';'] ? '/api' : 'http://production',
       backButtonIcon: 'ios-arrow-round-back',
       backButtonText: '',
-      debug: window['debug'],
+      debug: window[';'],
       hoverCSS: false,
       iconMode: 'ios',
       menuType: 'menu',
