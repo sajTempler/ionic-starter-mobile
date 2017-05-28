@@ -1,8 +1,7 @@
 config = require('@ionic/app-scripts/config/webpack.config.js')
 
-config.module.loaders.push({
-  test: require.resolve('pace-progress'),
-  loader: 'imports-loader?define=>false'
-})
+config.resolve.alias = {
+  pace: 'pace-progress'
+}
 
 module.exports = config
