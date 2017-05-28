@@ -14,16 +14,6 @@
     right: 100%;
     width: 100%;
     z-index: 1;
-
-    &-inner {
-      @extend .z;
-      box-shadow: 0 0 10px $color-green, 0 0 5px $color-green;
-      height: inherit;
-      left: auto;
-      right: 0px;
-      width: 100px;
-      transform: rotate(3deg) translateY(-4PX);
-    }
   }
 
 }
