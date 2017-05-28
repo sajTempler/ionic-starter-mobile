@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { IonicStorageModule } from '@ionic/storage'
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
 import { AppComponent } from './app.component'
-import { ComponentModule } from '../components/component.module'
+import * as Component from '../components'
 import * as Native from '../natives'
 import * as Provider from '../providers'
 
@@ -17,7 +17,8 @@ import * as Provider from '../providers'
   ],
   imports: [
     BrowserModule,
-    ComponentModule,
+    // 组件
+    Component.AppNavComponentModule,
     HttpModule,
     IonicModule.forRoot(AppComponent, {
       activator: 'ripple',
