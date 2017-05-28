@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Storage } from '@ionic/storage'
-import { Platform } from 'ionic-angular'
+import { App, Platform } from 'ionic-angular'
 import * as Native from '../natives'
 
 @Component({
@@ -16,6 +16,7 @@ import * as Native from '../natives'
 export class AppComponent {
 
   constructor (
+    public app: App,
     public platform: Platform,
     public splash: Native.SplashScreen,
     public storage: Storage
@@ -24,17 +25,33 @@ export class AppComponent {
   ngOnInit () {
     this.platform.ready()
     .then(res => this[res]())
-    .then(() => this.splash.hide())
   }
 
   cordova () {
     return Promise.all([
       this.storage.ready()
     ])
+    .then(() => this.splash.hide())
   }
 
   dom () {
     console.log('https://github.com/fundo90/ionic-starter-mobile')
+
+    const events = [
+      'viewDidEnter',
+      'viewDidLeave',
+      'viewDidLoad',
+      'viewWillEnter',
+      'viewWillLeave',
+      'viewWillUnload'
+    ]
+
+    events.forEach(
+      event => this.app[event].subscribe(
+        () => {}
+        // res => console.log(event, new Date, res)
+      )
+    )
   }
 
 }

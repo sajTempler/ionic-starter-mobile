@@ -35,12 +35,15 @@
     "@ionic/app-scripts": "1.3.7",
     "@ionic/cli-plugin-cordova": "latest",
     "@ionic/cli-plugin-ionic-angular": "latest",
+    "imports-loader": "latest",
     "intl": "latest",
+    "pace-progress": "latest",
     "postcss-pxtorem": "latest",
     "typescript": "2.3.3"
   },
   "config": {
     "ionic_copy": "./config/copy.config.js",
-    "ionic_sass": "./config/sass.config.js"
+    "ionic_sass": "./config/sass.config.js",
+    "ionic_webpack": "./config/webpack.config.js"
   }
 }
